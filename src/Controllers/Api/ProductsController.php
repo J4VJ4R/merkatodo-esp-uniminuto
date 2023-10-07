@@ -18,6 +18,7 @@ class ProductsController
         $products = $this->productsRepository->listProducts();
 
         $response->getBody()->write(json_encode($products));
+
         return $response
             ->withHeader('Content-Type', 'application/json');
     }

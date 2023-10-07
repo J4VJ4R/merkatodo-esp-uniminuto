@@ -10,10 +10,8 @@ use Grupo10\MerkaTodo\Models\Products\IProductsRepository;
 class Services extends Container {
 
     public function setup(): Container {
-        $this->set(
-            IProductsRepository::class,
-            fn(ContainerInterface $container) => new ProductsRepository()
-        );
+        $this->set(IProductsRepository::class, fn(ContainerInterface $container) => new ProductsRepository());
+
         return $this;
     }
 }
