@@ -1,0 +1,15 @@
+{
+    "name": "grupo10/merkatodo",
+    "type": "project",
+    "require": {
+        "slim/slim": "4.*",
+        "slim/psr7": "^1.6",
+        "php-di/slim-bridge": "^3.4",
+        "jeydotc/nev": "v2.0.0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Grupo10\\MerkaTodo\\": "src"
+        }
+    }
+}
