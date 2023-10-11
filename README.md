@@ -59,3 +59,23 @@ sequenceDiagram
     App -->> Client:Http Response
 ```
 Backend sequence Diagram
+
+## Project setup
+
+**1. Install Dependencies**
+
+```sh
+composer install
+```
+
+**2. Create Environment Settings**
+
+Create a new file named `.env` and fill it with appropriate settings, see `.env.example` to know what to put.
+
+## Run project
+
+```sh
+php -S localhost:5050
+```
+
+You can change `5050` with any other port.
