@@ -11,9 +11,17 @@ class IndexView extends View
         echo PageView::show([
             'title' => 'Home Page',
             'body' => function () { ?>
-                <h1>Home</h1>
-                <p>Welcome!</p>
-            <?php }
+            <h1>Home</h1>
+            <p>Welcome!</p>
+
+            <ul>
+                <?= self::drawEach($_ENV, function ($value) { ?>
+                    <li>
+                        <?= $value ?>
+                    </li>
+                <? }) ?>
+            </ul>
+        <?php }
         ]);
     }
 }

@@ -5,7 +5,8 @@
         "slim/slim": "4.*",
         "slim/psr7": "^1.6",
         "php-di/slim-bridge": "^3.4",
-        "jeydotc/nev": "v2.0.0.1"
+        "jeydotc/nev": "v2.0.0.1",
+        "vlucas/phpdotenv": "^5.5"
     },
     "autoload": {
         "psr-4": {
