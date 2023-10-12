@@ -2,38 +2,22 @@
 
 ```mermaid
 classDiagram
-
-namespace Models { 
     class Entity
     class IRepository
-}
-
-namespace Infrastructure {
     class InMemoryRepository
     class DoctrineRepository
-}
-
-namespace Views {
     class View
-}
-
-namespace Controllers {
     class Controller
-}
-
-namespace Setup {
     class Routes
     class Services
-}
-
-class App
+    class App
 
 <<interface>> IRepository
 IRepository <|.. InMemoryRepository
 IRepository <|.. DoctrineRepository
 IRepository --> Entity
-Controller ..> IRepository
-Controller ..> View
+Controller ..> IRepository: CRUD data.
+Controller ..> View: Renders data.
 Routes --> Controller: Maps to Http Request
 Services --> Controller: Configures
 App *-- Routes
@@ -53,7 +37,7 @@ sequenceDiagram
     Controller ->> IRepository: CRUD data
     IRepository -->> Controller: Results.
     Controller ->> View: Represent Data.
-    View -->> Controller: Html.
+    View -->> Controller: Html/Json.
     Controller ->> Controller: Build Http Response (Html)
     Controller -->> App: Http Response
     App -->> Client:Http Response
