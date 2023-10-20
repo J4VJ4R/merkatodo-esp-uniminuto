@@ -49,6 +49,7 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 *.lcov
+.phpunit.cache
 
 # nyc test coverage
 .nyc_output

@@ -3,11 +3,17 @@ namespace Grupo10\MerkaTodo\Tests\Controllers;
 
 use Grupo10\MerkaTodo\Controllers\HomeController;
 use Grupo10\MerkaTodo\Views\Home\IndexView;
+use Grupo10\MerkaTodo\Views\PageView;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\StreamInterface;
 
+#[CoversClass(HomeController::class)]
+#[UsesClass(PageView::class)]
+#[UsesClass(IndexView::class)]
 class HomeControllerTest extends TestCase
 {
     public function testIndex()

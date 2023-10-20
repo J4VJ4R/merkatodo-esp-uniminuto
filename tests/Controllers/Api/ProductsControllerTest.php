@@ -4,11 +4,19 @@ namespace Grupo10\MerkaTodo\Tests\Controllers\Api;
 use Grupo10\MerkaTodo\Controllers\Api\ProductsController;
 use Grupo10\MerkaTodo\Models\Products\IProductsRepository;
 use Grupo10\MerkaTodo\Models\Products\Product;
+use Grupo10\MerkaTodo\Views\Api\ApiView;
+use Grupo10\MerkaTodo\Views\Api\Products\ListProductsView;
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\UsesClass;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\StreamInterface;
 
+#[CoversClass(ProductsController::class)]
+#[UsesClass(ApiView::class)]
+#[UsesClass(ListProductsView::class)]
+#[UsesClass(Product::class)]
 class ProductsControllerTest extends TestCase
 {
     public function testListProducts()
