@@ -10,7 +10,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Grupo10\\MerkaTodo\\": "src"
+            "Grupo10\\MerkaTodo\\": "src",
+            "Grupo10\\MerkaTodo\\Tests\\": "tests"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10"
     }
 }

@@ -14,7 +14,7 @@ class Routes {
 
     public function setup() {
         $this->app->group('/api', function (RouteCollectorProxy $group){
-            $group->get('/products', ProductsController::class . ':get');
+            $group->get('/products', ProductsController::class . ':listProducts');
         });
         
         $this->app->get('/', HomeController::class . ':index');

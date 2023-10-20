@@ -13,14 +13,6 @@ class IndexView extends View
             'body' => function () { ?>
             <h1>Home</h1>
             <p>Welcome!</p>
-
-            <ul>
-                <?= self::drawEach($_ENV, function ($value) { ?>
-                    <li>
-                        <?= $value ?>
-                    </li>
-                <? }) ?>
-            </ul>
         <?php }
         ]);
     }
